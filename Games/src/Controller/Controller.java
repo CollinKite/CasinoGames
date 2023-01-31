@@ -13,7 +13,8 @@ public class Controller {
 
 
     public void start() {
-        view.menu();
+        player.setName(view.askForName());
+        view.menu(player);
         int input = view.readInt(1, 4);
         switch (input) {
             case 1:

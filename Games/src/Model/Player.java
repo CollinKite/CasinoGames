@@ -10,7 +10,7 @@ public class Player{
     public  Player(){}
     private String name;
 
-    private int credits;
+    private int credits = 500;
 
     public String getName() {
         return name;
