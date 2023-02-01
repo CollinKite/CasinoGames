@@ -12,26 +12,31 @@ public class Controller {
     Player player = new Player();
     SlotsController slotsController = new SlotsController();
 
+    private boolean loop = true;
+
 
     //This should be made into a loop
     public void start() {
         player.setName(view.askForName());
-        view.menu(player);
-        int input = view.readInt(1, 4);
-        switch (input) {
-            case 1:
-                System.out.println("You selected Blackjack");
-                break;
-            case 2:
-                System.out.println("You selected Craps");
-                break;
-            case 3:
-                System.out.println("You selected Slots");
-                slotsController.startSlots(player);
-                break;
-            case 4:
-                System.out.println("You selected Exit");
-                break;
+        while (loop) {
+            view.menu(player);
+            int input = view.readInt(1, 4);
+            switch (input) {
+                case 1:
+                    System.out.println("You selected Blackjack");
+                    break;
+                case 2:
+                    System.out.println("You selected Craps");
+                    break;
+                case 3:
+                    System.out.println("You selected Slots");
+                    slotsController.startSlots(player);
+                    break;
+                case 4:
+                    System.out.println("You selected Exit");
+                    loop = false;
+                    break;
+            }
         }
 
     }
