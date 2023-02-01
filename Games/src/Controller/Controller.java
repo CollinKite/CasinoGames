@@ -1,6 +1,7 @@
 package Controller;
 
 import Model.Player;
+import Slots.Controller.SlotsController;
 import View.View;
 
 import java.util.Scanner;
@@ -9,6 +10,7 @@ public class Controller {
 
     private static  View view = new View();
     Player player = new Player();
+    SlotsController slotsController = new SlotsController();
 
 
 
@@ -25,6 +27,7 @@ public class Controller {
                 break;
             case 3:
                 System.out.println("You selected Slots");
+                slotsController.startSlots(player);
                 break;
             case 4:
                 System.out.println("You selected Exit");
