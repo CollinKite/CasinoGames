@@ -9,13 +9,15 @@ public class SlotsController {
 
     public static View view = new View();
     public static SlotsModel slotsModel = new SlotsModel();
+    public static SlotsModel slotsModel2 = new SlotsModel();
+    public static SlotsModel slotsModel3 = new SlotsModel();
     public static SlotsView slotsView = new SlotsView();
     public boolean play = false;
 
     public void startSlots(Player player) {
 
         do {
-            slotsView.slotsMenu();
+            slotsView.slotsMenu(player);
             switch (view.readInt(1, 2)) {
                 case 1 -> {
                     if (player.getCredits() < 1)
@@ -24,9 +26,9 @@ public class SlotsController {
                         play = true;
                     }  if (player.getCredits() >= 1)
                     {
-                        player.setCredits(player.getCredits() - 1);
+                        player.setCredits(player.getCredits() - 50);
                         play = false;
-                        playSlots();
+                        playSlots(player);
                     }
                 }
                 case 2 -> play = true;
@@ -35,13 +37,30 @@ public class SlotsController {
 
     }
 
-    public void playSlots() {
+    public void playSlots(Player player) {
 
         int[] spin = slotsModel.spin();
-        System.out.println("You spun: " + spin[0] + " " + spin[1] + " " + spin[2]);
-        //I don't know how we want to implement the player's credit yet based on how they win or lose
-        System.out.println("You won: $" + slotsModel.scoreSpin());
+        int[] spin2 = slotsModel2.spin();
+        int[] spin3 = slotsModel3.spin();
 
+        slotsView.spin(spin, spin2, spin3);
+
+        checkWin(player);
+
+
+    }
+
+    public void checkWin(Player player)
+    {
+        if (slotsModel.scoreSpin() > 0)
+        {
+
+            System.out.println("You won: $" + slotsModel.scoreSpin());
+            player.setCredits(player.getCredits() + slotsModel.scoreSpin());
+        } else
+        {
+            System.out.println("You lost!");
+        }
 
     }
 

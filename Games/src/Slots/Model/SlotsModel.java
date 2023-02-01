@@ -25,4 +25,14 @@ public class SlotsModel {
             return 0;
         }
     }
+
+//        public int scoreSpin(int[] spin) {
+//        if (spin[0] == spin[1] && spin[1] == spin[2]) {
+//            return 100;
+//        } else if (spin[0] == spin[1] || spin[1] == spin[2] || spin[0] == spin[2]) {
+//            return 50;
+//        } else {
+//            return 0;
+//        }
+//    }
 }

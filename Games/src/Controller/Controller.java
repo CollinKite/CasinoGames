@@ -13,7 +13,7 @@ public class Controller {
     SlotsController slotsController = new SlotsController();
 
 
-
+    //This should be made into a loop
     public void start() {
         player.setName(view.askForName());
         view.menu(player);
