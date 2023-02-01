@@ -3,6 +3,7 @@ package Controller;
 import Model.Player;
 import Slots.Controller.SlotsController;
 import View.View;
+import BlackJack.Controller.BlackJackController;
 
 import java.util.Scanner;
 
@@ -11,6 +12,8 @@ public class Controller {
     private static  View view = new View();
     Player player = new Player();
     SlotsController slotsController = new SlotsController();
+
+    BlackJackController blackjackController = new BlackJackController();
 
     private boolean loop = true;
 
@@ -24,6 +27,7 @@ public class Controller {
             switch (input) {
                 case 1:
                     System.out.println("You selected Blackjack");
+                    blackjackController.startBlackjack(player);
                     break;
                 case 2:
                     System.out.println("You selected Craps");
