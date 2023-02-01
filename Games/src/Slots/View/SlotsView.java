@@ -18,4 +18,8 @@ public class SlotsView {
         System.out.println(spin[0] + " " + spin[1] + " " + spin[2]);
         System.out.println(spin3[0] + " " + spin3[1] + " " + spin3[2]);
     }
+
+    public void print(String message) {
+        System.out.println(message);
+    }
 }
