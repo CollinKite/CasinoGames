@@ -1,5 +1,6 @@
 package Controller;
 
+import GameFiles.Craps.Controller.CrapsController;
 import Model.Player;
 import GameFiles.Slots.Controller.SlotsController;
 import View.View;
@@ -14,6 +15,8 @@ public class Controller {
     SlotsController slotsController = new SlotsController();
 
     BlackJackController blackjackController = new BlackJackController();
+
+    CrapsController crapsController = new CrapsController();
 
     private boolean loop = true;
 
@@ -31,9 +34,10 @@ public class Controller {
                     break;
                 case 2:
                     System.out.println("You selected Craps");
+                    crapsController.play();
                     break;
                 case 3:
-                    System.out.println("You selected GameFiles.Slots");
+                    System.out.println("You selected Slots");
                     slotsController.startSlots(player);
                     break;
                 case 4:
