@@ -1,4 +1,4 @@
-package Slots.Model;
+package GameFiles.Slots.Model;
 
 public class SlotsModel {
     final int[] reel = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9};

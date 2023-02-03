@@ -1,8 +1,8 @@
-package Slots.Controller;
+package GameFiles.Slots.Controller;
 
 import Model.Player;
-import Slots.Model.SlotsModel;
-import Slots.View.SlotsView;
+import GameFiles.Slots.Model.SlotsModel;
+import GameFiles.Slots.View.SlotsView;
 import View.View;
 
 public class SlotsController {

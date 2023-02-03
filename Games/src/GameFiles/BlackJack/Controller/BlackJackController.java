@@ -1,9 +1,9 @@
-package BlackJack.Controller;
+package GameFiles.BlackJack.Controller;
 
 
 import Model.Player;
-import BlackJack.View.BlackJackView;
-import BlackJack.Model.BlackJackModel;
+import GameFiles.BlackJack.View.BlackJackView;
+import GameFiles.BlackJack.Model.BlackJackModel;
 import View.View;
 
 public class BlackJackController {

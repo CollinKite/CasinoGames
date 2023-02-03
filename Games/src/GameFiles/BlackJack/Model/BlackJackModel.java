@@ -1,4 +1,4 @@
-package BlackJack.Model;
+package GameFiles.BlackJack.Model;
 
 public class BlackJackModel {
     public static int drawCard() {

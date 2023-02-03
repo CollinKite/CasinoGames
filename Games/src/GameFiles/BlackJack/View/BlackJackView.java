@@ -1,4 +1,4 @@
-package BlackJack.View;
+package GameFiles.BlackJack.View;
 
 import Model.Player;
 

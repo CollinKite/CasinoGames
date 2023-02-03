@@ -1,14 +1,14 @@
-package Slots.View;
+package GameFiles.Slots.View;
 
 import Model.Player;
 
 public class SlotsView {
     public void slotsMenu(Player player) {
-        System.out.println("♣♠ Welcome to the Casino Slots! ♥♦");
+        System.out.println("♣♠ Welcome to the Casino GameFiles.Slots! ♥♦");
         System.out.println("You have $" + player.getCredits() + " credits");
         System.out.println("Each spin costs $50");
         System.out.println("Please select an option:");
-        System.out.println("1. Play Slots");
+        System.out.println("1. Play GameFiles.Slots");
         System.out.println("2. Exit");
     }
 

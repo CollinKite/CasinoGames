@@ -1,9 +1,9 @@
 package Controller;
 
 import Model.Player;
-import Slots.Controller.SlotsController;
+import GameFiles.Slots.Controller.SlotsController;
 import View.View;
-import BlackJack.Controller.BlackJackController;
+import GameFiles.BlackJack.Controller.BlackJackController;
 
 import java.util.Scanner;
 
@@ -33,7 +33,7 @@ public class Controller {
                     System.out.println("You selected Craps");
                     break;
                 case 3:
-                    System.out.println("You selected Slots");
+                    System.out.println("You selected GameFiles.Slots");
                     slotsController.startSlots(player);
                     break;
                 case 4:

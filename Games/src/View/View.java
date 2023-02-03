@@ -13,7 +13,7 @@ public class View {
         System.out.println("Please select a game to play:");
         System.out.println("1. Play Blackjack");
         System.out.println("2. Play Craps");
-        System.out.println("3. Play Slots");
+        System.out.println("3. Play GameFiles.Slots");
         System.out.println("4. Exit");
     }
 
