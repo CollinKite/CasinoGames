@@ -34,7 +34,7 @@ public class Controller {
                     break;
                 case 2:
                     System.out.println("You selected Craps");
-                    crapsController.play();
+                    crapsController.startCraps(player);
                     break;
                 case 3:
                     System.out.println("You selected Slots");

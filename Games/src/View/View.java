@@ -39,4 +39,8 @@ public class View {
         System.out.println("Please enter your name:");
         return scanner.next();
     }
+
+    public void print(String message) {
+        System.out.println(message);
+    }
 }

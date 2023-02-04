@@ -22,7 +22,7 @@ public class SlotsController {
                 case 1 -> {
                     if (player.getCredits() < 1)
                     {
-                        slotsView.print("You don't have enough credits to play");
+                        view.print("You don't have enough credits to play");
                         play = true;
                     }  if (player.getCredits() >= 1)
                     {
@@ -52,11 +52,11 @@ public class SlotsController {
         if (slotsModel.scoreSpin() > 0)
         {
 
-            slotsView.print("You won $" + slotsModel.scoreSpin() + "!");
+            view.print("You won $" + slotsModel.scoreSpin() + "!");
             player.setCredits(player.getCredits() + slotsModel.scoreSpin());
         } else
         {
-            slotsView.print("You lost!");
+            view.print("You lost!");
         }
 
     }
