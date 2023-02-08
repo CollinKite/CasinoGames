@@ -40,6 +40,25 @@ public class View {
         return scanner.next();
     }
 
+    public String readString(){
+        //must be a valid string
+        String input = "";
+        boolean valid = false;
+        while (!valid) {
+            try {
+                input = scanner.next();
+                if (input != null) {
+                    valid = true;
+                } else {
+                    System.out.println("Please enter a valid string");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Please enter a valid string");
+            }
+        }
+        return input;
+    }
+
     public void print(String message) {
         System.out.println(message);
     }
